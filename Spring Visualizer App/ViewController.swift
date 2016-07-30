@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         let webView = WKWebView(frame: view.frame)
         view.addSubview(webView)
-        webView.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.12, alpha: 1)
+        webView.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.1, alpha: 1)
         
         let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "HTML")!
         let url = NSURL(fileURLWithPath: path)

@@ -59,9 +59,9 @@
 				71FE68F11D4CF6D7007252E5 /* HTML */,
 				71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */,
 				71FE68E11D4CEFDE007252E5 /* ViewController.swift */,
+				71FE68E81D4CEFDE007252E5 /* LaunchScreen.storyboard */,
 				71FE68E31D4CEFDE007252E5 /* Main.storyboard */,
 				71FE68E61D4CEFDE007252E5 /* Assets.xcassets */,
-				71FE68E81D4CEFDE007252E5 /* LaunchScreen.storyboard */,
 				71FE68EB1D4CEFDE007252E5 /* Info.plist */,
 			);
 			path = "Spring Visualizer App";
@@ -292,6 +292,7 @@
 				71FE68F01D4CEFDE007252E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
