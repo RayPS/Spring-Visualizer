@@ -2,42 +2,60 @@
 document.body.style.cursor = "auto"
 Framer.Defaults.deviceType = "fullScreen"
 
-
 BG = new Layer
 	size: Screen.size
-	backgroundColor: "hsl(0, 0%, 12%)"
+	backgroundColor: "hsl(0, 0%, 10%)"
 
-monitorMargin = 20
+tension = 500
+friction = 25
+velocity = 0
+
+# Monitor
+monitorMargin = 10
 
 monitor = new Layer
 	x: monitorMargin
 	y: monitorMargin
 	size: Screen.width - monitorMargin * 2
-	backgroundColor: "hsl(0, 0%, 10%)"
-	borderRadius: 10
-	borderWidth: 1
-	borderColor: "hsl(0, 0%, 25%)"
+	backgroundColor: "hsl(0, 0%, 5%)"
+	borderRadius: 8
+	borderWidth: 3
+	borderColor: "hsla(0, 0%, 100%, 0.05)"
 	clip: true
+	style:
+		boxShadow:
+			"0 2px 2px hsla(1, 100%, 100%, 0.03)," +
+			"0 -2px 2px hsla(1, 100%, 100%, 0.03)," +
+			"inset 0 2px 3px hsla(1, 100%, 0%, 0.2)," +
+			"inset 0 0px 5px hsla(1, 100%, 0%, 0.5)"
 
-
+# Grid
 gridFactor = 20 # Numbers of lines to draw the grid
 gridGap = monitor.width / gridFactor
-gridColor = new Color("black").lighten(15)
+
+grid = new Layer
+	parent: monitor
+	clip: true
+	size: monitor.size
+	backgroundColor: "none"
 
 for gridIndex in [0...gridFactor - 1]
-	monitor.addChild new Layer
-		width: monitor.width-2, height: 1
-		y: gridGap * gridIndex + gridGap - 2
-		backgroundColor:
+	grid.addChild new Layer
+		width: grid.width, height: 1
+		y: gridGap * gridIndex + gridGap - monitor.borderWidth
+		backgroundColor: "white"
+		opacity:
 			if gridIndex is gridFactor / 2 - 1
-			then gridColor.lighten(10)
-			else gridColor
+			then 0.1
+			else 0.03
 
-	monitor.addChild new Layer
-		width: 1, height: monitor.height-2
-		x: gridGap * gridIndex + gridGap
-		backgroundColor: gridColor
+	grid.addChild new Layer
+		width: 1, height: grid.height
+		x: gridGap * gridIndex + gridGap - monitor.borderWidth
+		backgroundColor: "white"
+		opacity: 0.03
 
+# Oval & Rect
 oval = new Layer
 	parent: monitor
 	size: monitor.size, scale: 0.25
@@ -52,76 +70,100 @@ rect = new Layer
 	parent: monitor
 	size: monitor.height / 25
 	borderRadius: "25%"
-	backgroundColor: "rgba(121,0,178,1)"
+	backgroundColor: "rgba(239,155,40,1)"
 	x: Align.right(-5), y: Align.bottom(-5)
 
+# Slider Panel
 sliderPanel = new Layer
 # 	width: Screen.width - monitorMargin * 2
-# 	height: Screen.height - monitor.maxY - monitorMargin * 2
+	height: Screen.height - monitor.maxY - monitorMargin * 2
 	width: monitor.width
-	height: 250
+# 	height: 250
 	x: monitorMargin
 	y: monitor.maxY + monitorMargin
-	borderRadius: 10
-	backgroundColor: "hsla(0, 0%, 100%, 0.015)"
-	borderWidth: 1
-	borderColor:  "hsla(0, 0%, 100%, 0.05)"
-	shadowY: 5, shadowBlur: 20
-	shadowColor: "hsla(0, 0%, 0%, 0.05)"
+	borderRadius: monitor.borderRadius
+	backgroundColor: "hsla(0, 0%, 0%, 0.3)"
+	style:
+		boxShadow:
+			"0 1px 2px hsla(1, 100%, 100%, 0.05)," +
+			"inset 0 2px 3px hsla(1, 100%, 0%, 0.2)"
 
-
+# Sliders
 sliderPanelPadding = 20
 sliderLabelHeight = 20
 
+sliderBoxMargin = 2
+sliderBoxPadding = 20
+sliderBoxHeight = (sliderPanel.height - sliderBoxMargin * 4) / 3
+
 for name, index in ["Tension", "Friction", "Velocity"]
 
-	labelProps =
+	box = new Layer
+		name: "#{name}SliderBox"
 		parent: sliderPanel
+		x: sliderBoxMargin
+		y: sliderBoxMargin + (sliderBoxMargin + sliderBoxHeight) * index
+		width: sliderPanel.width - sliderBoxMargin*2
+		height: sliderBoxHeight
+		borderRadius: sliderPanel.borderRadius - sliderBoxMargin
+		backgroundColor: "hsl(0, 0%, 13%)"
+		style:
+			boxShadow:
+				"inset 0 1px 2px hsla(1, 100%, 100%, 0.05)," +
+				"0 1px 2px hsla(1, 100%, 0%, 0.05)"
+
+	labelProps =
+		parent: box
 		html: name
-		color: "hsla(0, 0%, 100%, 0.2)"
+		color: "hsla(0, 0%, 100%, 0.3)"
 		backgroundColor: "transparent"
-		y: sliderPanelPadding + index * 75
+		y: sliderBoxPadding
 		width: 100, height: sliderLabelHeight
 		style:
 			fontSize: "16px"
 			lineHeight: sliderLabelHeight + "px"
-# 		backgroundColor: "#1F1F1F"
+			textShadow: "0 1px 2px hsla(1, 100%, 0%, 0.5)"
+# 			backgroundColor: "#1a1a1a"
 
 	label = new Layer
 	label.props = labelProps
 	label.name = "#{name}Label"
-	label.x = monitorMargin
+	label.x = sliderBoxPadding
 
 	value = new Layer
 	value.props = labelProps
 	value.name = "#{name}Value"
-	value.x = Align.right(-monitorMargin)
+	value.x = Align.right(-sliderBoxPadding)
 	value.style.textAlign = "right"
 
 	slider = new SliderComponent
 		name: name
-		parent: sliderPanel
-		x: monitorMargin
-		y: label.maxY + 10
-		width: sliderPanel.width - monitorMargin * 2
-		height: 5
-		backgroundColor: "hsla(0, 0%, 0%, 0.2)"
-		shadowY: 1
-		shadowColor: "hsla(0, 0%, 100%, 0.1)"
+		parent: box
+		x: sliderBoxPadding
+		y: Align.bottom(-sliderBoxPadding)
+		width: box.width - sliderBoxPadding * 2
+		height: 10
+		backgroundColor: new Color(monitor.backgroundColor).lighten(5)
+		style:
+			boxShadow:
+				"0 1px 0px hsla(1, 100%, 100%, 0.05)," +
+				"inset 0 2px 5px hsla(1, 100%, 0%, 0.2)"
 
-	slider.fill.backgroundColor = "#28affa"
+
+	slider.fill.style =
+		backgroundColor: "#28affa"
+		boxShadow:
+			"inset 0 3px 3px hsla(1, 100%, 100%, 0.3)"
 
 	slider.knob.draggable.momentum = false
 	newKnob = slider.knob.copy()
 	slider.knob.props =
 		height: 50
-		shadowBlur: 0
-		shadowY: 0
-		shadowColor: "transparent"
 		backgroundColor: "transparent"
-		cornerRadius: 0
+		style: boxShadow: "none"
 	slider.knob.addChild newKnob
-	newKnob.size = 20
+	newKnob.size = 30
+	newKnob.width = 20
 	newKnob.center()
 
 
@@ -133,27 +175,25 @@ for name, index in ["Tension", "Friction", "Velocity"]
 		when "Tension" then 500
 		when "Friction" then 25
 		when "Velocity" then 0
-
+		
 	slider.on "change:value", (event, layer) ->
 		roundedValue = Utils.round this.value
-		valueLabel = sliderPanel.subLayersByName("#{layer.name}Value")[0]
+		valueLabel = layer.parent.subLayersByName("#{layer.name}Value")[0]
 		valueLabel.html = roundedValue
+		
+		variable = layer.name.toLowerCase()
+		eval "#{variable} = #{roundedValue}"
+# 		print tension, friction, velocity # It works!
 
 	slider.on Events.TouchEnd, (event, layer) ->
 		clean()
-		drawBySlider()
-
-tension = sliderPanel.subLayersByName("Tension")[0]
-friction = sliderPanel.subLayersByName("Friction")[0]
-velocity = sliderPanel.subLayersByName("Velocity")[0]
+		draw()
 
 
-clean = ->
-	canvas = monitor.subLayersByName("canvas")[0]
-	canvas.destroy()
 
-draw = (tension, friction, velocity) ->
-
+# Draw
+# draw = (tension, friction, velocity) ->
+draw = () ->
 	curveOptions =
 		tension: tension
 		friction: friction
@@ -188,7 +228,7 @@ draw = (tension, friction, velocity) ->
 		curve: "spring-rk4"
 		curveOptions: curveOptions
 		properties:
-			y: Align.center(-1)
+			y: Align.center(-monitor.borderWidth)
 			backgroundColor: "red"
 
 	drawX = brush.animate
@@ -207,12 +247,15 @@ draw = (tension, friction, velocity) ->
 				properties: scale: 0.2
 			canvas.addChild clone
 
-drawBySlider = () ->
-	draw(tension.value, friction.value, velocity.value)
-drawBySlider()
 
+# Clean
+clean = ->
+	canvas = monitor.subLayersByName("canvas")[0]
+	canvas.destroy()
+
+draw()
 
 monitor.onClick ->
 	if not rect.isAnimating
 		clean()
-		drawBySlider()
+		draw()
