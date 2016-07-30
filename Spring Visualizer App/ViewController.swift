@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         let url = NSURL(fileURLWithPath: path)
         
         webView.loadFileURL(url, allowingReadAccessToURL: url)
+        webView.scrollView.bounces = false
     }
 
 }
