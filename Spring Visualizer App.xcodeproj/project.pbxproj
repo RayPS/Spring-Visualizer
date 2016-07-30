@@ -257,7 +257,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Spring Visualizer App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -268,7 +268,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Spring Visualizer App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
