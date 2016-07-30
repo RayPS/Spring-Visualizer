@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71FE68DC1D4CEFDE007252E5 /* Spring Visualizer App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71FE68E11D4CEFDE007252E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71FE68E41D4CEFDE007252E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		71FE68DD1D4CEFDE007252E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71FE68DC1D4CEFDE007252E5 /* Spring Visualizer App.app */,
+				71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = "Spring Visualizer App";
 			productName = "Spring Visualizer App";
-			productReference = 71FE68DC1D4CEFDE007252E5 /* Spring Visualizer App.app */;
+			productReference = 71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +258,7 @@
 				INFOPLIST_FILE = "Spring Visualizer App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spring Visualizer";
 			};
 			name = Debug;
 		};
@@ -269,7 +269,7 @@
 				INFOPLIST_FILE = "Spring Visualizer App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spring Visualizer";
 			};
 			name = Release;
 		};
