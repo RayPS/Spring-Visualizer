@@ -12,6 +12,7 @@
 		71FE68E51D4CEFDE007252E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FE68E31D4CEFDE007252E5 /* Main.storyboard */; };
 		71FE68E71D4CEFDE007252E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71FE68E61D4CEFDE007252E5 /* Assets.xcassets */; };
 		71FE68EA1D4CEFDE007252E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FE68E81D4CEFDE007252E5 /* LaunchScreen.storyboard */; };
+		71FE68F21D4CF6D7007252E5 /* HTML in Resources */ = {isa = PBXBuildFile; fileRef = 71FE68F11D4CF6D7007252E5 /* HTML */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		71FE68E61D4CEFDE007252E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71FE68E91D4CEFDE007252E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71FE68EB1D4CEFDE007252E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71FE68F11D4CF6D7007252E5 /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		71FE68DE1D4CEFDE007252E5 /* Spring Visualizer App */ = {
 			isa = PBXGroup;
 			children = (
+				71FE68F11D4CF6D7007252E5 /* HTML */,
 				71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */,
 				71FE68E11D4CEFDE007252E5 /* ViewController.swift */,
 				71FE68E31D4CEFDE007252E5 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71FE68EA1D4CEFDE007252E5 /* LaunchScreen.storyboard in Resources */,
+				71FE68F21D4CF6D7007252E5 /* HTML in Resources */,
 				71FE68E71D4CEFDE007252E5 /* Assets.xcassets in Resources */,
 				71FE68E51D4CEFDE007252E5 /* Main.storyboard in Resources */,
 			);
