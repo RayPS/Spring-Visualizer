@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		715073E91D4D760F00D60E53 /* HTML in Resources */ = {isa = PBXBuildFile; fileRef = 715073E81D4D760F00D60E53 /* HTML */; };
+		715073F11D4D861A00D60E53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715073F01D4D861A00D60E53 /* AppDelegate.swift */; };
+		715073F31D4D861A00D60E53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715073F21D4D861A00D60E53 /* ViewController.swift */; };
+		715073F51D4D861A00D60E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715073F41D4D861A00D60E53 /* Assets.xcassets */; };
+		715073F81D4D861A00D60E53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715073F61D4D861A00D60E53 /* Main.storyboard */; };
 		71FE68E01D4CEFDE007252E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */; };
 		71FE68E21D4CEFDE007252E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE68E11D4CEFDE007252E5 /* ViewController.swift */; };
 		71FE68E51D4CEFDE007252E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FE68E31D4CEFDE007252E5 /* Main.storyboard */; };
@@ -17,6 +21,12 @@
 
 /* Begin PBXFileReference section */
 		715073E81D4D760F00D60E53 /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = "<group>"; };
+		715073EE1D4D861A00D60E53 /* Spring Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		715073F01D4D861A00D60E53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		715073F21D4D861A00D60E53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		715073F41D4D861A00D60E53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		715073F71D4D861A00D60E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		715073F91D4D861A00D60E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71FE68E11D4CEFDE007252E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +37,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		715073EB1D4D861A00D60E53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71FE68D91D4CEFDE007252E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,11 +54,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		715073EF1D4D861A00D60E53 /* Spring Visualizer Mac */ = {
+			isa = PBXGroup;
+			children = (
+				715073F01D4D861A00D60E53 /* AppDelegate.swift */,
+				715073F21D4D861A00D60E53 /* ViewController.swift */,
+				715073F41D4D861A00D60E53 /* Assets.xcassets */,
+				715073F61D4D861A00D60E53 /* Main.storyboard */,
+				715073F91D4D861A00D60E53 /* Info.plist */,
+			);
+			path = "Spring Visualizer Mac";
+			sourceTree = "<group>";
+		};
 		71FE68D31D4CEFDE007252E5 = {
 			isa = PBXGroup;
 			children = (
 				715073E81D4D760F00D60E53 /* HTML */,
-				71FE68DE1D4CEFDE007252E5 /* Spring Visualizer App */,
+				71FE68DE1D4CEFDE007252E5 /* Spring Visualizer iOS */,
+				715073EF1D4D861A00D60E53 /* Spring Visualizer Mac */,
 				71FE68DD1D4CEFDE007252E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */,
+				715073EE1D4D861A00D60E53 /* Spring Visualizer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71FE68DE1D4CEFDE007252E5 /* Spring Visualizer App */ = {
+		71FE68DE1D4CEFDE007252E5 /* Spring Visualizer iOS */ = {
 			isa = PBXGroup;
 			children = (
 				71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */,
@@ -64,12 +95,29 @@
 				71FE68E61D4CEFDE007252E5 /* Assets.xcassets */,
 				71FE68EB1D4CEFDE007252E5 /* Info.plist */,
 			);
-			path = "Spring Visualizer App";
+			path = "Spring Visualizer iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		715073ED1D4D861A00D60E53 /* Spring Visualizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 715073FA1D4D861A00D60E53 /* Build configuration list for PBXNativeTarget "Spring Visualizer" */;
+			buildPhases = (
+				715073EA1D4D861A00D60E53 /* Sources */,
+				715073EB1D4D861A00D60E53 /* Frameworks */,
+				715073EC1D4D861A00D60E53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spring Visualizer";
+			productName = "Spring Visualizer";
+			productReference = 715073EE1D4D861A00D60E53 /* Spring Visualizer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		71FE68DB1D4CEFDE007252E5 /* Spring Visualizer App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71FE68EE1D4CEFDE007252E5 /* Build configuration list for PBXNativeTarget "Spring Visualizer App" */;
@@ -97,6 +145,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Ray;
 				TargetAttributes = {
+					715073ED1D4D861A00D60E53 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					71FE68DB1D4CEFDE007252E5 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -116,11 +167,21 @@
 			projectRoot = "";
 			targets = (
 				71FE68DB1D4CEFDE007252E5 /* Spring Visualizer App */,
+				715073ED1D4D861A00D60E53 /* Spring Visualizer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		715073EC1D4D861A00D60E53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715073F51D4D861A00D60E53 /* Assets.xcassets in Resources */,
+				715073F81D4D861A00D60E53 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71FE68DA1D4CEFDE007252E5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +196,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		715073EA1D4D861A00D60E53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715073F31D4D861A00D60E53 /* ViewController.swift in Sources */,
+				715073F11D4D861A00D60E53 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		71FE68D81D4CEFDE007252E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +217,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		715073F61D4D861A00D60E53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				715073F71D4D861A00D60E53 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		71FE68E31D4CEFDE007252E5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -166,6 +244,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		715073FB1D4D861A00D60E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Spring Visualizer Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		715073FC1D4D861A00D60E53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Spring Visualizer Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		71FE68EC1D4CEFDE007252E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -255,7 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Spring Visualizer App/Info.plist";
+				INFOPLIST_FILE = "Spring Visualizer iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "Spring Visualizer";
@@ -266,7 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Spring Visualizer App/Info.plist";
+				INFOPLIST_FILE = "Spring Visualizer iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "Spring Visualizer";
@@ -276,6 +384,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		715073FA1D4D861A00D60E53 /* Build configuration list for PBXNativeTarget "Spring Visualizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				715073FB1D4D861A00D60E53 /* Debug */,
+				715073FC1D4D861A00D60E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		71FE68D71D4CEFDE007252E5 /* Build configuration list for PBXProject "Spring Visualizer App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

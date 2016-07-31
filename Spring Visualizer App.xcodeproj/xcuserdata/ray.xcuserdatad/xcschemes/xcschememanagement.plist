@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Spring Visualizer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>715073ED1D4D861A00D60E53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>71FE68DB1D4CEFDE007252E5</key>
 		<dict>
 			<key>primary</key>
