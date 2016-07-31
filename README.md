@@ -10,9 +10,17 @@
 ![](.readme/4.7-inch@2x.png)
 
 
-## How to Build
+## How it Build
 
-Read `gulpfile.js` for details.
+Using Gulp to watch `app.coffee`
+
+After `app.cofee` changed in Framer Studio or any text editor,
+
+the necessary files will copy to `HTML/`
+
+Then use `WKWebview` to load `HTML/index.html`
+
+Read `gulpfile.js` for more details.
 
 ```
 > gulp
