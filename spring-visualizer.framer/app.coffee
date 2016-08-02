@@ -1,17 +1,26 @@
 # Framer.Loop.delta = 1/240 # Slow Motion
 document.body.style.cursor = "auto"
 Framer.Defaults.deviceType = "fullScreen"
+Framer.Device.contentScale = 1
+
+viewport = document.querySelector "meta[name=viewport]"
+viewportContent = "width=device-width, initial-scale=1, user-scalable=no"
+viewport.setAttribute("content", viewportContent)
+
+# Framer.Device.setContentScale(1, true)
+# Framer.Device.setDeviceScale(0.5, true)
 
 BG = new Layer
 	size: Screen.size
-	backgroundColor: "hsl(0, 0%, 10%)"
+	backgroundColor: "hsl(0, 0%, 12.5%)"
 
 tension = 500
 friction = 25
 velocity = 0
 
 # Monitor
-monitorMargin = 10
+# monitorMargin = 10
+monitorMargin = Screen.width * 0.025
 
 monitor = new Layer
 	x: monitorMargin
@@ -28,6 +37,23 @@ monitor = new Layer
 			"0 -2px 2px hsla(1, 100%, 100%, 0.03)," +
 			"inset 0 2px 3px hsla(1, 100%, 0%, 0.2)," +
 			"inset 0 0px 5px hsla(1, 100%, 0%, 0.5)"
+
+glassMargin = 6
+
+glass = new Layer
+	parent: monitor
+	backgroundColor: "transparent"
+	width: monitor.width - glassMargin * 2
+	height: monitor.width - glassMargin * 2
+	x: Align.center
+	y: Align.center
+	borderRadius: monitor.borderRadius - monitor.borderWidth * 2
+	style:
+		boxShadow:
+			"inset 0 0px 30px hsla(1, 100%, 100%, 0.1)," +
+			"inset 0 3px 1px hsla(1, 100%, 100%, 0.1)," +
+			"inset 0 -3px 5px hsla(1, 100%, 100%, 0.05)," +
+			"inset 0 50px 50px hsla(1, 100%, 100%, 0.02)"
 
 # Grid
 gridFactor = 20 # Numbers of lines to draw the grid
@@ -82,7 +108,7 @@ sliderPanel = new Layer
 	x: monitorMargin
 	y: monitor.maxY + monitorMargin
 	borderRadius: monitor.borderRadius
-	backgroundColor: "hsla(0, 0%, 0%, 0.3)"
+	backgroundColor: "hsla(0, 0%, 0%, 0.5)"
 	style:
 		boxShadow:
 			"0 1px 2px hsla(1, 100%, 100%, 0.05)," +
@@ -106,7 +132,7 @@ for name, index in ["Tension", "Friction", "Velocity"]
 		width: sliderPanel.width - sliderBoxMargin*2
 		height: sliderBoxHeight
 		borderRadius: sliderPanel.borderRadius - sliderBoxMargin
-		backgroundColor: "hsl(0, 0%, 13%)"
+		backgroundColor: "hsla(0, 0%, 100%, 0.1)"
 		style:
 			boxShadow:
 				"inset 0 1px 2px hsla(1, 100%, 100%, 0.05)," +
@@ -143,7 +169,7 @@ for name, index in ["Tension", "Friction", "Velocity"]
 		y: Align.bottom(-sliderBoxPadding)
 		width: box.width - sliderBoxPadding * 2
 		height: 10
-		backgroundColor: new Color(monitor.backgroundColor).lighten(5)
+		backgroundColor: "hsla(0, 0%, 0%, 0.25)"
 		style:
 			boxShadow:
 				"0 1px 0px hsla(1, 100%, 100%, 0.05)," +
