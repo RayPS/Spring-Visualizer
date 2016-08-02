@@ -24,6 +24,7 @@
 ## Other
 *.moved-aside
 *.xcuserstate
+*/Icon
 
 ## Obj-C/Swift specific
 *.hmap
