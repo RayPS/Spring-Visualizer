@@ -3,12 +3,11 @@ document.body.style.cursor = "auto"
 Framer.Defaults.deviceType = "fullScreen"
 Framer.Device.contentScale = 1
 
-viewport = document.querySelector "meta[name=viewport]"
-viewportContent = "width=device-width, initial-scale=1, user-scalable=no"
-viewport.setAttribute("content", viewportContent)
 
-# Framer.Device.setContentScale(1, true)
-# Framer.Device.setDeviceScale(0.5, true)
+
+# viewport = document.querySelector "meta[name=viewport]"
+# viewportContent = "width=device-width, initial-scale=1, user-scalable=no"
+# viewport.setAttribute("content", viewportContent)
 
 BG = new Layer
 	size: Screen.size
