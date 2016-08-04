@@ -5,18 +5,20 @@
   "deviceOrientation" : 0,
   "sharedPrototype" : 1,
   "contentScale" : 1,
-  "deviceType" : "fullscreen",
+  "deviceType" : "apple-iphone-6s-space-gray",
   "selectedHand" : "",
   "updateDelay" : 0.3,
-  "deviceScale" : 1,
+  "deviceScale" : 0.75,
   "foldedCodeRanges" : [
-    "{456, 968}",
-    "{1425, 599}",
-    "{2025, 374}",
-    "{2400, 414}",
-    "{2815, 2546}",
-    "{5362, 1039}",
-    "{6402, 84}"
+    "{42, 475}",
+    "{821, 972}",
+    "{1794, 599}",
+    "{2394, 421}",
+    "{2816, 413}",
+    "{3230, 2768}",
+    "{5999, 1209}",
+    "{7209, 84}"
   ],
-  "orientation" : 0
+  "orientation" : 0,
+  "fullScreen" : false
 }
