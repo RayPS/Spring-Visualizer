@@ -4,7 +4,7 @@ Framer.Device.contentScale = 1
 Framer.Device.deviceType = "fullscreen"
 
 if Utils.isDesktop()
-	Framer.Device.contentScale = 0.5	
+	Framer.Device.contentScale = 0.5
 	
 if Utils.isFramerStudio()
 	Framer.Device.deviceType = "apple-iphone-6s-space-gray"
@@ -15,12 +15,16 @@ if Utils.isFramerStudio()
 # Cursor
 document.body.style.cursor = "auto"
 
+# Contect Menu
+document.body.setAttribute "oncontextmenu", "return false"
+
 # Hints
 Framer.Extras.Hints.disable()
 
 # FramerStudio Canvas Background Color
 # Screen.backgroundColor = 
 
+isLandscape = Screen.width > Screen.height
 
 
 # viewport = document.querySelector "meta[name=viewport]"
@@ -131,6 +135,10 @@ sliderPanel = new Layer
 		boxShadow:
 			"0 2px 4px hsla(1, 100%, 100%, 0.1)," +
 			"inset 0 2px 6px hsla(1, 100%, 0%, 0.5)"
+			
+			
+			
+
 
 # Sliders
 sliderPanelPadding = 20
