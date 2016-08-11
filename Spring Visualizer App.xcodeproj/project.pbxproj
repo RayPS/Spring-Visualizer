@@ -43,7 +43,7 @@
 		715073F71D4D861A00D60E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		715073F91D4D861A00D60E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715074021D4D91E300D60E53 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71FE68DC1D4CEFDE007252E5 /* Spring Visualizer Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FE68DF1D4CEFDE007252E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71FE68E11D4CEFDE007252E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71FE68E41D4CEFDE007252E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		71FE68DD1D4CEFDE007252E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */,
+				71FE68DC1D4CEFDE007252E5 /* Spring Visualizer Lite.app */,
 				715073EE1D4D861A00D60E53 /* Spring Visualizer.app */,
 			);
 			name = Products;
@@ -150,7 +150,7 @@
 			);
 			name = "Spring Visualizer App";
 			productName = "Spring Visualizer App";
-			productReference = 71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */;
+			productReference = 71FE68DC1D4CEFDE007252E5 /* Spring Visualizer Lite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -385,7 +385,7 @@
 				INFOPLIST_FILE = "Spring Visualizer iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
-				PRODUCT_NAME = "Spring Visualizer";
+				PRODUCT_NAME = "Spring Visualizer Lite";
 			};
 			name = Debug;
 		};
@@ -396,7 +396,7 @@
 				INFOPLIST_FILE = "Spring Visualizer iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
-				PRODUCT_NAME = "Spring Visualizer";
+				PRODUCT_NAME = "Spring Visualizer Lite";
 			};
 			name = Release;
 		};
@@ -410,6 +410,7 @@
 				715073FC1D4D861A00D60E53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71FE68D71D4CEFDE007252E5 /* Build configuration list for PBXProject "Spring Visualizer App" */ = {
 			isa = XCConfigurationList;
