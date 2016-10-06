@@ -168,6 +168,7 @@
 					};
 					71FE68DB1D4CEFDE007252E5 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -386,6 +387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "Spring Visualizer Lite";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -397,6 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "Spring Visualizer Lite";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

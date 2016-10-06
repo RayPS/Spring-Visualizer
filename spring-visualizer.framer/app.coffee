@@ -15,7 +15,7 @@ if Utils.isFramerStudio()
 # Cursor
 document.body.style.cursor = "auto"
 
-# Contect Menu
+# Context Menu
 document.body.setAttribute "oncontextmenu", "return false"
 
 # Hints

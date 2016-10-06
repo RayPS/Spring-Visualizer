@@ -11,7 +11,7 @@ import WebKit
 
 class ViewController: UIViewController {
     
-    override func prefersStatusBarHidden() -> Bool { return true }
+    override var prefersStatusBarHidden : Bool { return true }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,10 @@ class ViewController: UIViewController {
         view.addSubview(webView)
         webView.backgroundColor = view.backgroundColor
         
-        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "HTML")!
-        let url = NSURL(fileURLWithPath: path)
+        let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "HTML")!
+        let url = URL(fileURLWithPath: path)
         
-        webView.loadFileURL(url, allowingReadAccessToURL: url)
+        webView.loadFileURL(url, allowingReadAccessTo: url)
         webView.scrollView.bounces = false
     }
 
