@@ -37,6 +37,7 @@ gulp.task('coffee', function() {
     .pipe(coffeelint({
       opt: {
         no_tabs: { level: 'ignore' },
+        max_line_length: { level: 'ignore' },
         indentation: { value: 1 }
       }
     }))
