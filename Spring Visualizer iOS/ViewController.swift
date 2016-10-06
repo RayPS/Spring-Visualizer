@@ -11,8 +11,8 @@ import WebKit
 
 class ViewController: UIViewController {
     
-    override var prefersStatusBarHidden : Bool { return true }
-
+    override var prefersStatusBarHidden: Bool { get { return true }}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         view.addSubview(webView)
         webView.backgroundColor = view.backgroundColor
         
+            
         let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "HTML")!
         let url = URL(fileURLWithPath: path)
         
