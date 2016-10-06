@@ -73,19 +73,10 @@ fastlane/test_output
 
 
 # Framer Specific
-spring-visualizer.framer/.*.html
-spring-visualizer.framer/framer/*.old*
-spring-visualizer.framer/framer/backup.coffee
-spring-visualizer.framer/framer/backups/*
-spring-visualizer.framer/framer/.*.hash
-spring-visualizer.framer/framer/preview.png
-spring-visualizer.framer/framer/manifest.txt
-
-
-Spring Visualizer App/HTML/src.framer/*
-!Spring Visualizer App/HTML/src.framer/app.coffee
-!Spring Visualizer App/HTML/src.framer/framer
-
-Spring Visualizer App/HTML/src.framer/framer/*
-!Spring Visualizer App/HTML/src.framer/framer/config.json
-
+*.framer/.*.html
+*.framer/framer/*.old*
+*.framer/framer/backup.coffee
+*.framer/framer/backups/*
+*.framer/framer/.*.hash
+*.framer/framer/preview.png
+*.framer/framer/manifest.txt
