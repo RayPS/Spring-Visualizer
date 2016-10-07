@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		715073E81D4D760F00D60E53 /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = "<group>"; };
-		715073EE1D4D861A00D60E53 /* Spring Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		715073EE1D4D861A00D60E53 /* Spring Visualizer Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		715073F01D4D861A00D60E53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		715073F21D4D861A00D60E53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		715073F41D4D861A00D60E53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */,
-				715073EE1D4D861A00D60E53 /* Spring Visualizer.app */,
+				715073EE1D4D861A00D60E53 /* Spring Visualizer Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		715073ED1D4D861A00D60E53 /* Spring Visualizer */ = {
+		715073ED1D4D861A00D60E53 /* Spring Visualizer Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 715073FA1D4D861A00D60E53 /* Build configuration list for PBXNativeTarget "Spring Visualizer" */;
+			buildConfigurationList = 715073FA1D4D861A00D60E53 /* Build configuration list for PBXNativeTarget "Spring Visualizer Mac" */;
 			buildPhases = (
 				715073EA1D4D861A00D60E53 /* Sources */,
 				715073EB1D4D861A00D60E53 /* Frameworks */,
@@ -131,14 +131,14 @@
 			);
 			dependencies = (
 			);
-			name = "Spring Visualizer";
+			name = "Spring Visualizer Mac";
 			productName = "Spring Visualizer";
-			productReference = 715073EE1D4D861A00D60E53 /* Spring Visualizer.app */;
+			productReference = 715073EE1D4D861A00D60E53 /* Spring Visualizer Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
-		71FE68DB1D4CEFDE007252E5 /* Spring Visualizer App */ = {
+		71FE68DB1D4CEFDE007252E5 /* Spring Visualizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71FE68EE1D4CEFDE007252E5 /* Build configuration list for PBXNativeTarget "Spring Visualizer App" */;
+			buildConfigurationList = 71FE68EE1D4CEFDE007252E5 /* Build configuration list for PBXNativeTarget "Spring Visualizer" */;
 			buildPhases = (
 				71FE68D81D4CEFDE007252E5 /* Sources */,
 				71FE68D91D4CEFDE007252E5 /* Frameworks */,
@@ -148,7 +148,7 @@
 			);
 			dependencies = (
 			);
-			name = "Spring Visualizer App";
+			name = "Spring Visualizer";
 			productName = "Spring Visualizer App";
 			productReference = 71FE68DC1D4CEFDE007252E5 /* Spring Visualizer.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +165,7 @@
 				TargetAttributes = {
 					715073ED1D4D861A00D60E53 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					71FE68DB1D4CEFDE007252E5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -186,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71FE68DB1D4CEFDE007252E5 /* Spring Visualizer App */,
-				715073ED1D4D861A00D60E53 /* Spring Visualizer */,
+				71FE68DB1D4CEFDE007252E5 /* Spring Visualizer */,
+				715073ED1D4D861A00D60E53 /* Spring Visualizer Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +278,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -292,6 +294,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -392,10 +395,10 @@
 				DEVELOPMENT_TEAM = MGAF98TG33;
 				INFOPLIST_FILE = "Spring Visualizer iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer-Pro";
 				PRODUCT_NAME = "Spring Visualizer";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -406,17 +409,17 @@
 				DEVELOPMENT_TEAM = MGAF98TG33;
 				INFOPLIST_FILE = "Spring Visualizer iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer-Pro";
 				PRODUCT_NAME = "Spring Visualizer";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		715073FA1D4D861A00D60E53 /* Build configuration list for PBXNativeTarget "Spring Visualizer" */ = {
+		715073FA1D4D861A00D60E53 /* Build configuration list for PBXNativeTarget "Spring Visualizer Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				715073FB1D4D861A00D60E53 /* Debug */,
@@ -434,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71FE68EE1D4CEFDE007252E5 /* Build configuration list for PBXNativeTarget "Spring Visualizer App" */ = {
+		71FE68EE1D4CEFDE007252E5 /* Build configuration list for PBXNativeTarget "Spring Visualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71FE68EF1D4CEFDE007252E5 /* Debug */,

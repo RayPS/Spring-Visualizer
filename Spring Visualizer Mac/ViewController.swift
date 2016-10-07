@@ -11,7 +11,7 @@ import WebKit
 
 class ViewController: NSViewController {
     
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.
         }
@@ -23,17 +23,20 @@ class ViewController: NSViewController {
         
         
         
-        view.layer!.backgroundColor = NSColor(hue: 0, saturation: 0, brightness: 0.1, alpha: 1).CGColor
+//        view.layer!.backgroundColor = NSColor(hue: 0, saturation: 0, brightness: 0.1, alpha: 1).cgColor
         
         let webView = WKWebView(frame: view.frame)
         view.addSubview(webView)
         
         
-        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html", inDirectory: "HTML")!
-        let url = NSURL(fileURLWithPath: path)
+        let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "HTML")!
+        let url = URL(fileURLWithPath: path)
         
         webView.setValue(true, forKey: "drawsTransparentBackground")
-        webView.loadFileURL(url, allowingReadAccessToURL: url)
+        webView.loadFileURL(url, allowingReadAccessTo: url)
+        
+//        webView.scrollView.scrollEnabled = false
+//        webView.mainFrame.frameView.allowsScrolling = false
     }
     
     

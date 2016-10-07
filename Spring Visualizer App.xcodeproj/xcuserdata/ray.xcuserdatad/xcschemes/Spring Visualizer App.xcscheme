@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "71FE68DB1D4CEFDE007252E5"
                BuildableName = "Spring Visualizer.app"
-               BlueprintName = "Spring Visualizer App"
+               BlueprintName = "Spring Visualizer"
                ReferencedContainer = "container:Spring Visualizer App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71FE68DB1D4CEFDE007252E5"
             BuildableName = "Spring Visualizer.app"
-            BlueprintName = "Spring Visualizer App"
+            BlueprintName = "Spring Visualizer"
             ReferencedContainer = "container:Spring Visualizer App.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,7 +57,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71FE68DB1D4CEFDE007252E5"
             BuildableName = "Spring Visualizer.app"
-            BlueprintName = "Spring Visualizer App"
+            BlueprintName = "Spring Visualizer"
             ReferencedContainer = "container:Spring Visualizer App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,7 +76,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71FE68DB1D4CEFDE007252E5"
             BuildableName = "Spring Visualizer.app"
-            BlueprintName = "Spring Visualizer App"
+            BlueprintName = "Spring Visualizer"
             ReferencedContainer = "container:Spring Visualizer App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
