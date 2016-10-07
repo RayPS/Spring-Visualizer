@@ -14,7 +14,7 @@ if (Utils.isFramerStudio()) {
   if (Framer.Device == null) {
     Framer.Device = new Framer.DeviceView();
   }
-  document.querySelector("head>meta[name=viewport]").setAttribute("content", "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=yes");
+  document.querySelector("head>meta[name=viewport]").setAttribute("content", "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no");
   Framer.Device._update();
 }
 
@@ -23,6 +23,8 @@ if (Utils.isDesktop() && !Utils.isFramerStudio()) {
 }
 
 isLandscape = Screen.width > Screen.height;
+
+document.body.style.overflow = "hiddent";
 
 document.body.style.cursor = "auto";
 
@@ -82,7 +84,7 @@ spring = {
       velocity: 0
     },
     range: {
-      stiffness: [0, 1000],
+      stiffness: [1, 1000],
       damping: [1, 100],
       mass: [1, 20],
       velocity: [0, 100]
@@ -279,8 +281,8 @@ BG = new Layer({
 
 visualizer = new PageComponent({
   parent: BG,
-  width: BG.width,
-  height: BG.height * 0.47,
+  width: isLandscape ? BG.height : BG.width,
+  height: isLandscape ? BG.height : BG.height * 0.47,
   scrollVertical: false,
   style: {
     backgroundImage: gradients[0]
@@ -473,11 +475,12 @@ for (k = 0, len1 = ref.length; k < len1; k++) {
 
 panel = new Layer({
   parent: BG,
-  y: visualizer.maxY,
+  x: isLandscape ? BG.height : 0,
+  y: isLandscape ? 0 : visualizer.maxY,
   html: "panel",
   backgroundColor: "white",
-  width: BG.width,
-  height: BG.height - visualizer.height
+  width: isLandscape ? BG.width - BG.height : BG.width,
+  height: isLandscape ? BG.height : BG.height - visualizer.height
 });
 
 tabbar = new Layer({

@@ -11,7 +11,7 @@ else
 	Framer.Device ?= new Framer.DeviceView()
 	
 	document.querySelector("head>meta[name=viewport]").setAttribute "content",
-	"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=yes"
+	"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"
 
 	Framer.Device._update()
 
@@ -23,7 +23,8 @@ if Utils.isDesktop() and not Utils.isFramerStudio()
 
 isLandscape = Screen.width > Screen.height
 
-
+# Overflow
+document.body.style.overflow = "hiddent"
 # Cursor
 document.body.style.cursor = "auto"
 # Font
@@ -87,7 +88,7 @@ spring =
 			mass: 1
 			velocity: 0
 		range:
-			stiffness: [0, 1000]
+			stiffness: [1, 1000]
 			damping: [1, 100]
 			mass: [1, 20]
 			velocity: [0, 100]
@@ -289,8 +290,8 @@ BG = new Layer
 # Visualizer
 visualizer = new PageComponent
 	parent: BG
-	width: BG.width
-	height: BG.height * 0.47
+	width: if isLandscape then BG.height else BG.width
+	height: if isLandscape then BG.height else BG.height * 0.47
 	scrollVertical: false
 	style: backgroundImage: gradients[0]
 
@@ -433,11 +434,12 @@ for page in visualizer.content.children
 # Slider Panel
 panel = new Layer
 	parent: BG
-	y: visualizer.maxY
+	x: if isLandscape then BG.height else 0
+	y: if isLandscape then 0 else visualizer.maxY
 	html: "panel"
 	backgroundColor: "white"
-	width: BG.width
-	height: BG.height - visualizer.height
+	width: if isLandscape then BG.width - BG.height else BG.width
+	height: if isLandscape then BG.height else BG.height - visualizer.height
 # Tab Bar
 tabbar = new Layer
 	parent: panel
