@@ -1,19 +1,27 @@
 # Setup
+if Utils.isFramerStudio()
+	is_iPhone = Framer.Device.deviceType.includes "apple-iphone"
+	is_iPhonePlus = Framer.Device.deviceType.includes "plus"
+	is_iPhoneNotPlus = is_iPhone and not is_iPhonePlus
+	
+	if is_iPhonePlus then Framer.Device.content.scale = 3
+	if is_iPhoneNotPlus then Framer.Device.content.scale = 2
+
+else
+	Framer.Device ?= new Framer.DeviceView()
+	
+	document.querySelector("head>meta[name=viewport]").setAttribute "content",
+	"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=yes"
+
+	Framer.Device._update()
+
+if Utils.isDesktop() and not Utils.isFramerStudio()
+	Framer.Device.deviceType = "fullscreen"
+
+
+
+
 isLandscape = Screen.width > Screen.height
-isDesktopBrowser = Utils.isDesktop() and not Utils.isFramerStudio()
-
-is_iPhone = Framer.Device.deviceType.includes "apple-iphone"
-is_iPhonePlus = Framer.Device.deviceType.includes "plus"
-is_iPhoneNotPlus = is_iPhone and not is_iPhonePlus
-
-if is_iPhonePlus and Utils.isFramerStudio() then Framer.Device.content.scale = 3
-if is_iPhoneNotPlus and Utils.isFramerStudio() then Framer.Device.content.scale = 2
-
-if isDesktopBrowser then Framer.Device.deviceType = "fullscreen"
-
-document.querySelector("head>meta[name=viewport]").setAttribute "content",
-"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"
-Framer.Device._update()
 
 
 # Cursor
@@ -100,9 +108,9 @@ Render = (springType) ->
 	spring[springType].svgPoints = []
 
 	for index, value of values
-		l = values.length 
+		l = values.length
 		i = index
-		x = parseInt(i) * (canvas.width / (l)) 
+		x = parseInt(i) * (canvas.width / (l))
 		y = value * (canvas.height / 2)
 		
 		spring[springType].svgPoints.push [x, canvas.height - y]
@@ -353,7 +361,7 @@ dot = new Layer
 hideDot = new Animation
 	layer: dot
 	time: 0.25
-	properties: 
+	properties:
 		scale: 0
 
 showDot = hideDot.invert()
