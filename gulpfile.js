@@ -46,7 +46,7 @@ gulp.task('coffee', function() {
     .pipe(coffee({
       bare: true
     }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest(htmlPath))
     .pipe(browserSync.reload({
       stream: true
