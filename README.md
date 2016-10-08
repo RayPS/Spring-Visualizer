@@ -10,7 +10,7 @@
 Spring Visualizer 2.0 | Spring Visualizer Legacy| Spring Visualizer for Mac
 :---:|:---:|:---:
 ![](.readme/appicon.png)|![](.readme/appicon-legacy.png)|![](.readme/appicon-mac.png)
-<br>[**[App Store]**](https://itunes.apple.com/app/id1143244115)<br><br>|<br>[**[App Store]**](https://itunes.apple.com/app/id1139500914)<br><br>|<br>[**[Mac App Store]**](https://itunes.apple.com/app/id1163478394) / [**[Zip]**](releases)<br><br>
+<br>[**[App Store]**](https://itunes.apple.com/app/id1143244115)<br><br>|<br>[**[App Store]**](https://itunes.apple.com/app/id1139500914)<br><br>|<br>[**[Mac App Store]**](https://itunes.apple.com/app/id1163478394) / [**[Zip]**](https://github.com/RayPS/Spring-Visualizer/release)<br><br>
 ![](.readme/screen.png)|![](.readme/screen-legacy.png)|![](.readme/screen-mac.png)
 
 
@@ -72,4 +72,4 @@ override func viewDidLoad() {
 I don't know how to disable bounce scrolling for **WKWebView** in macOS,
 `WKWebView.scrollView` is [documented](https://developer.apple.com/reference/webkit/wkwebview) but not found in Cocoa.
 
-If you got any idea, please send pull request or open an [issues](issues) to let me know!
+If you got any idea, please send pull request or open an [issues](https://github.com/RayPS/Spring-Visualizer/issues) to let me know!
