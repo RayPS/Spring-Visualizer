@@ -1,7 +1,11 @@
-# Spring Visualizer
-### Spring Animation Curve Visualizer
+<h1 align="center">Spring Visualizer</h1>
+<p align="center">Spring Animation Curve Visualizer</p>
+
+<br>
 
 	This project mainly show you how i built iOS App & macOS App using FramerStudio, Xcode and Gulp.
+
+<br>
 
 Spring Visualizer 2.0 | Spring Visualizer Legacy| Spring Visualizer for Mac
 :---:|:---:|:---:
