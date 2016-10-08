@@ -21,8 +21,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        
+
 //        view.layer!.backgroundColor = NSColor(hue: 0, saturation: 0, brightness: 0.1, alpha: 1).cgColor
         
         let webView = WKWebView(frame: view.frame)
@@ -34,9 +33,6 @@ class ViewController: NSViewController {
         
         webView.setValue(true, forKey: "drawsTransparentBackground")
         webView.loadFileURL(url, allowingReadAccessTo: url)
-        
-//        webView.scrollView.scrollEnabled = false
-//        webView.mainFrame.frameView.allowsScrolling = false
     }
     
     
