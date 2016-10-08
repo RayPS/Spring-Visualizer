@@ -1,27 +1,71 @@
-![](.readme/appicon.png)
-
 # Spring Visualizer
-### Spring(rk4) Animation Curve Options Visualizer
+### Spring Animation Curve Visualizer
 
-<a href="https://itunes.apple.com/us/app/spring-visualizer/id1139500914?ls=1&mt=8"><img src=".readme/btn-ios.png" height="60px"></a>
-<a href="#"><img src=".readme/btn-macos.png" height="60px"></a>
+	This project mainly show you how i built iOS App & macOS App using FramerStudio, Xcode and Gulp.
+
+Spring Visualizer 2.0 | Spring Visualizer Legacy| Spring Visualizer for Mac
+:---:|:---:|:---:
+![](.readme/appicon.png)|![](.readme/appicon-legacy.png)|![](.readme/appicon-mac.png)
+<br>[**[App Store]**](https://itunes.apple.com/app/id1143244115)<br><br>|<br>[**[App Store]**](https://itunes.apple.com/app/id1139500914)<br><br>|<br>[**[Mac App Store]**](https://itunes.apple.com/app/id1163478394) / [**[Zip]**](releases)<br><br>
+![](.readme/screen.png)|![](.readme/screen-legacy.png)|![](.readme/screen-mac.png)
 
 
-![](.readme/4.7-inch@2x.png)
+# How to run
+
+First for all, you need to install all dependencies.
+
+	$ npm install
+
+Then
+	
+	$ gulp
+
+Open `project.framer` in FramerStudio, you might want to edit or preview the framer project.
+
+Hit `⌘+S` when you're done.
+
+Open `Spring Visualizer App.xcodeproj` in Xcode.
+
+Hit `⌘+R` to run the App in Simulator,
+
+if you don't see the Mac App scheme, just add a new scheme:
+
+<img src=".readme/Screen Shot 2016-10-08 at 6.33.53 PM.png" width="544px"/>
 
 
-## How it Build
+# How it works
 
-Using Gulp to watch `app.coffee`
 
-After `app.cofee` changed in Framer Studio or any text editor,
+Gulp will keep watching `app.coffee`
+
+After `app.cofee` modified in FramerStudio or any text editor,
 
 the necessary files will copy to `HTML/`
 
-Then use `WKWebview` to load `HTML/index.html`
+Then use **WKWebView** to load `HTML/index.html`
 
-Read `gulpfile.js` for more details.
 
+> ViewController.swift
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let webView = WKWebView(frame: view.frame)
+    view.addSubview(webView)
+    webView.backgroundColor = view.backgroundColor
+    
+    let path = Bundle.main.path(forResource: "index", ofType: "html", inDirectory: "HTML")!
+    let url = URL(fileURLWithPath: path)
+    
+    webView.loadFileURL(url, allowingReadAccessTo: url)
+    webView.scrollView.bounces = false
+}
 ```
-> gulp
-```
+
+# Known issues
+
+I don't know how to disable bounce scrolling for **WKWebView** in macOS,
+`WKWebView.scrollView` is [documented](https://developer.apple.com/reference/webkit/wkwebview) but not found in Cocoa.
+
+If you got any idea, please send pull request or open an [issues](issues) to let me know!
