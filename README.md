@@ -74,7 +74,7 @@ I don't know how to disable bounce scrolling for **WKWebView** in macOS,
 
 If you got any idea, please send pull request or open an [issues](https://github.com/RayPS/Spring-Visualizer/issues) to let me know!
 
-# Conclutions
+# Conclusions
 
 Everytime i show my Framer prototypes to my friends they never relize that was a prototype, even i told them that was just a prototype they still don't believe. It works smoothly just like a real App. In a certain sense prototypes is now productions, we have `Utils.domLoadDataSync` to access any APIs, for example here is a very simple [Dribbble Client](http://share.framerjs.com/2a7rusw6qg4u/) i made in Framer. Thanks to Webkit!
 
