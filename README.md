@@ -3,7 +3,7 @@
 
 <br>
 
-	This project mainly show you how i built iOS App & macOS App using FramerStudio, Xcode and Gulp.
+	This project mainly shows you how i built iOS App & macOS App using FramerStudio, Xcode and Gulp.
 
 <br>
 
@@ -40,13 +40,13 @@ if you don't see the Mac App scheme, just add a new scheme:
 # How it works
 
 
-Gulp will keep watching `app.coffee`
+Gulp will keep watching `app.coffee`.
 
-After `app.cofee` modified in FramerStudio or any text editor,
+After `app.cofee` is modified in FramerStudio or any text editor,
 
-the necessary files will copy to `HTML/`
+the necessary files will be copied to `HTML/`.
 
-Then use **WKWebView** to load `HTML/index.html`
+Then use **WKWebView** to load `HTML/index.html`.
 
 
 > ViewController.swift
@@ -72,10 +72,10 @@ override func viewDidLoad() {
 I don't know how to disable bounce scrolling for **WKWebView** in macOS,
 `WKWebView.scrollView` is [documented](https://developer.apple.com/reference/webkit/wkwebview) but not found in Cocoa.
 
-If you got any idea, please send pull request or open an [issues](https://github.com/RayPS/Spring-Visualizer/issues) to let me know!
+If you have any idea, please send pull requests or open an [issue](https://github.com/RayPS/Spring-Visualizer/issues) to let me know!
 
 # Conclusions
 
-Everytime i show my Framer prototypes to my friends they never relize that was a prototype, even i told them that was just a prototype they still don't believe. It works smoothly just like a real App. In a certain sense prototypes is now productions, we have `Utils.domLoadDataSync` to access any APIs, for example here is a very simple [Dribbble Client](http://share.framerjs.com/2a7rusw6qg4u/) i made in Framer. Thanks to Webkit!
+Every time I showed my Framer prototypes to my friends they never realized that was a prototype. Even after I told them that was just a prototype they still didn't believe. It runs smoothly just like a real App. In a certain sense prototypes are now productions. We have `Utils.domLoadDataSync` to access any APIs, for example here is a very simple [Dribbble Client](http://share.framerjs.com/2a7rusw6qg4u/) I made in Framer. Thanks to Webkit!
 
 Hey designers, go make your ideas come true! :)
