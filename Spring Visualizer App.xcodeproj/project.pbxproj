@@ -35,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		711B9AC81DA8D46200108FCD /* Spring Visualizer Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spring Visualizer Mac.entitlements"; sourceTree = "<group>"; };
 		715073E81D4D760F00D60E53 /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = "<group>"; };
 		715073EE1D4D861A00D60E53 /* Spring Visualizer Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spring Visualizer Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		715073F01D4D861A00D60E53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		715073EF1D4D861A00D60E53 /* Spring Visualizer Mac */ = {
 			isa = PBXGroup;
 			children = (
+				711B9AC81DA8D46200108FCD /* Spring Visualizer Mac.entitlements */,
 				715074021D4D91E300D60E53 /* WindowController.swift */,
 				715073F01D4D861A00D60E53 /* AppDelegate.swift */,
 				715073F21D4D861A00D60E53 /* ViewController.swift */,
@@ -165,7 +167,14 @@
 				TargetAttributes = {
 					715073ED1D4D861A00D60E53 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = MGAF98TG33;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					71FE68DB1D4CEFDE007252E5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -270,12 +279,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "Spring Visualizer Mac/Spring Visualizer Mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MGAF98TG33;
 				INFOPLIST_FILE = "Spring Visualizer Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer-Mac";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.spring-visualizer-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -286,12 +297,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "Spring Visualizer Mac/Spring Visualizer Mac.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MGAF98TG33;
 				INFOPLIST_FILE = "Spring Visualizer Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Spring-Visualizer-Mac";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.spring-visualizer-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
